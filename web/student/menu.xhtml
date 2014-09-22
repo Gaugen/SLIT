@@ -3,7 +3,8 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 
   <!-- This is the default sidebar menu for HRMS -->
   <head>
@@ -15,10 +16,10 @@
     so it is defined in a separate file, to make it easier to override. -->
     <ui:composition>
       <ul>
-        <li><h:link value="#{uistrings.home}" outcome="index"/></li>
-        <li><h:link value="#{uistrings.modules}" outcome="modules"/></li>
-        <li><h:link value="#{uistrings.status}" outcome="status"/></li>
-        <li><h:link value="#{uistrings.resources}" outcome="resources"/></li>
+        <li><h:link value="Hovedside Student" outcome="index"/></li>
+        <li><h:link value="Moduler" outcome="modules"/></li>
+        <li><h:link value="Status" outcome="status"/></li>
+        <li><h:link value="Ressurser" outcome="resources"/></li>
       </ul>
     </ui:composition>
   </h:body>

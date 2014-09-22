@@ -5,16 +5,25 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
-    <title>Student Pages</title>
+    <title>Facelet Title</title>
   </h:head>
  <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.intro}</p>
+        <h2>Status på din klasse</h2>
+        <h:dataTable styleClass="data" value="" var="m">
+          <h:column>
+            <f:facet name="header">#{uistrings.module_no}</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">#{uistrings.module_name}</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">#{uistrings.module_description}</f:facet>
+          </h:column>
+        </h:dataTable>
       </ui:define>
-
-      <ui:define name="menu">
+      <ui:define name="menuitems">
         <ui:include src="/student/menu.xhtml" />
       </ui:define>
     </ui:composition>
