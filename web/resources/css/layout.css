@@ -20,7 +20,7 @@ div.layout-outer {
 /* common column settings */
 .layout-outer, .layout-inner {
   float:left;
-  width:100%;
+  width:90%;
   position:relative;
 }
 .layout-content,
@@ -39,7 +39,7 @@ div.layout-outer {
 }
 .layout-outer .layout-menu {
   width:21%;      /* left column content width (column width minus left and right padding) */
-  left:6%;      /* (right column left and right padding) plus (left column left padding) */
+  left:15%;      /* (right column left and right padding) plus (left column left padding) */
 }
 /* Footer styles */
 .layout-footer {
