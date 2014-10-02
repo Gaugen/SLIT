@@ -3,16 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/admin/menu.xhtml</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/src/java/no/uia/slit/uistrings/teacher_en.properties</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/src/java/no/uia/slit/uistrings/teacher.properties</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/student/index.xhtml</file>
             <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/admin/index.xhtml</file>
-=======
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/teacher/menu.xhtml</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/admin/menu.xhtml</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/src/java/no/uia/slit/uistrings/common.properties</file>
             <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/student/modules.xhtml</file>
             <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/student/resources.xhtml</file>
             <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/student/status.xhtml</file>
-            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/resources/css/format.css</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/templates/masterlayout.xhtml</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/src/java/no/uia/slit/uistrings/admin.properties</file>
+            <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/teacher/index.xhtml</file>
             <file>file:/C:/Users/Tor/Desktop/SLIT/SLIT/web/student/menu.xhtml</file>
->>>>>>> origin/master
         </group>
     </open-files>
 </project-private>
