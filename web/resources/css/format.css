@@ -25,13 +25,13 @@ h3 {
   background:#fff;    /* right column background colour */
 }
 .layout-outer .layout-inner {
-  background:#3CF; /* left column background colour */
+  background:#f4f4f4; /* left column background colour */
   border-right: 1px solid black;
 }
 
 /* Header elements */
 .layout-header {
-  background-color:#3CF;
+  background-color:#fee;
   border-bottom:thin solid #000;
   text-align: center;
 }

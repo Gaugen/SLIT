@@ -9,70 +9,49 @@ import javax.faces.component.UIViewRoot;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
  * Common solutions to common problems
- *
  * @author even
  */
 public class JsfUtils {
 
     /**
      * Display an error message.
-     *
      * @param id - the id of the component msg is associated to
      * @param msg - the message
      */
     public static void addMessage(String id, String msg) {
-        FacesContext ctxt = getFacesContext();
+        FacesContext ctxt = FacesContext.getCurrentInstance();
         ctxt.addMessage(id, new FacesMessage(msg));
     }
 
-    /**
-     * Write to the server log
-     */
+    /** Write to the server log */
     public static void log(String message) {
-        ExternalContext context = getExternalContext();
+        ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
         context.log(message);
     }
 
-    public static FacesContext getFacesContext() {
-        return FacesContext.getCurrentInstance();
-    }
-
-    public static ExternalContext getExternalContext() {
-        return getFacesContext().getExternalContext();
-    }
-
-    public static HttpServletResponse getResponse() {
-        FacesContext context = getFacesContext();
-        HttpServletResponse response = (HttpServletResponse) context.getExternalContext().getResponse();
-        return response;
-    }
-
     public static String getUserName() {
-        ExternalContext context = getExternalContext();
+        ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
         Object requestObject = context.getRequest();
         if (requestObject instanceof HttpServletRequest) {
-            HttpServletRequest req = (HttpServletRequest) requestObject;
+            HttpServletRequest req = (HttpServletRequest)requestObject;
             return req.getRemoteUser();
-        } else {
-            return null;
         }
+        else return null;
     }
 
     public static void logout() {
         FacesContext ctxt = FacesContext.getCurrentInstance();
         ExternalContext extCtxt = ctxt.getExternalContext();
-        HttpSession session = (HttpSession) (extCtxt.getSession(false));
+        HttpSession session = (HttpSession)(extCtxt.getSession(false));
         session.invalidate();
     }
 
     /**
      * Get the pagename (view id) of the current page.
-     *
      * @return
      */
     public static String getCurrentViewId() {
@@ -97,11 +76,10 @@ public class JsfUtils {
     }
 
     /**
-     * This method retrieves properties from a resource bundle, so they can be
-     * used in the java code.
-     *
-     * @param baseName basename of the resource file. The same value as the
-     * basename tag(s) in faces-config.xml
+     * This method retrieves properties from a resource bundle, so they
+     * can be used in the java code.
+     * @param baseName basename of the resource file. The same value
+     * as the basename tag(s) in faces-config.xml
      * @param key the name of the property
      * @return
      */
@@ -114,13 +92,9 @@ public class JsfUtils {
         String str = null;
         if (null != baseName) {
             bundle = ResourceBundle.getBundle(baseName, loc, cl);
-            if (null != bundle) {
-                str = bundle.getString(key);
-            }
+            if (null != bundle) str = bundle.getString(key);
         }
-        if (null == str) {
-            str = "Missing resource: " + baseName + "." + key;
-        }
+        if (null == str) str = "Missing resource: "+baseName+"."+key;
 
         return str;
     }
@@ -128,20 +102,14 @@ public class JsfUtils {
     private static Locale getLocale(FacesContext ctxt) {
         Locale loc = null;
         UIViewRoot root = ctxt.getViewRoot();
-        if (null != root) {
-            loc = root.getLocale();
-        }
-        if (loc == null) {
-            loc = Locale.getDefault();
-        }
+        if (null != root) loc = root.getLocale();
+        if (loc == null) loc = Locale.getDefault();
         return loc;
     }
 
     private static ClassLoader getClassLoader() {
         ClassLoader ldr = Thread.currentThread().getContextClassLoader();
-        if (null == ldr) {
-            ldr = ClassLoader.getSystemClassLoader();
-        }
+        if (null == ldr) ldr = ClassLoader.getSystemClassLoader();
         return ldr;
     }
 }

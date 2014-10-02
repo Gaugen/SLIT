@@ -4,13 +4,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import no.uia.slit.ejb.StudentPersister;
-import no.uia.slit.ejb.TeacherPersister;
 
 /**
  *
@@ -21,12 +18,6 @@ public class AuthPersistenceService {
 
    @PersistenceContext
    private EntityManager em;
-
-   @EJB
-   TeacherPersister teacherSvc;
-
-   @EJB
-   StudentPersister studentSvc;
 
    public AuthUser findUser(String name) {
       return em.find(AuthUser.class, name);
@@ -44,22 +35,11 @@ public class AuthPersistenceService {
    }
 
    public void saveUser(AuthUser user) {
-       em.merge(user);
-       if (user.getGroups().contains(AuthGroup.student)) {
-           studentSvc.createStudent(user.getUsername());
-       }
-       if (user.getGroups().contains(AuthGroup.teacher)) {
-           teacherSvc.createTeacher(user.getUsername());
-       }
+      em.merge(user);
    }
 
    public void removeUser(AuthUser user) {
-       AuthUser u = em.merge(user);
-       if (u.getGroups().contains(AuthGroup.student))
-           studentSvc.delete(u.getUsername());
-       if (u.getGroups().contains(AuthGroup.teacher))
-           teacherSvc.delete(u.getUsername());
-      em.remove(u);
+      em.remove(user);
    }
 
    public void createDebugData() {

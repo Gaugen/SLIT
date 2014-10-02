@@ -1,30 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:h="http://java.sun.com/jsf/html">
   <h:head>
     <title>Student Pages</title>
   </h:head>
   <h:body>
-
-    <h3>Teachers</h3>
-    <h:dataTable value="#{teacherListBean.list}" var="t" >
-      <h:column>
-        <f:facet name="header">Id</f:facet>
-        #{t.id}
-      </h:column>
-      <h:column>
-        <f:facet name="header">Username</f:facet>
-        #{t.username}
-      </h:column>
-      <h:column>
-        <f:facet name="header">CV</f:facet>
-        <h:form rendered="#{! (empty t.cv)}">
-          <h:commandLink value='Download CV' action='#{downloadBean.downloadFile(t.cv.id)}'/>
-        </h:form>
-      </h:column>
-    </h:dataTable>
-    </h:body>
+    Student page
+  </h:body>
 </html>
 
