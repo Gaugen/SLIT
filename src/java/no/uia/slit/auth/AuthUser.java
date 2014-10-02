@@ -49,7 +49,7 @@ public class AuthUser implements Serializable {
       return email;
    }
 
-   public void setUsername(String username) {
+   public void setEmail(String username) {
       this.email = email;
    }
 
