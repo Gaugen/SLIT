@@ -3,44 +3,20 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of b191010... Prøvd å fikse, men må tilbakestille prosjektet til før vi begynte med opplastningsfunksjon
             <file>file:/C:/Users/TorArne/Desktop/SLIT/SLIT/src/java/no/uia/slit/auth/AuthUser.java</file>
             <file>file:/C:/Users/TorArne/Desktop/SLIT/SLIT/src/java/no/uia/slit/web/filetransfer/UploadBean.java</file>
             <file>file:/C:/Users/TorArne/Desktop/SLIT/SLIT/web/teacher/upload.xhtml</file>
             <file>file:/C:/Users/TorArne/Desktop/SLIT/SLIT/src/java/no/uia/slit/auth/AuthInfoBean.java</file>
             <file>file:/C:/Users/TorArne/Desktop/SLIT/SLIT/src/java/no/uia/slit/web/filetransfer/DownloadBean.java</file>
 =======
-<<<<<<< HEAD
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/teacher/upload.xhtml</file>
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/filetransfer/DownloadBean.java</file>
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/filetransfer/UploadBean.java</file>
-=======
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthPersistenceService.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthUtils.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthGroupConverter.java</file>
-=======
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/teacher/upload.xhtml</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/filetransfer/DownloadBean.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/filetransfer/UploadBean.java</file>
->>>>>>> origin/master
->>>>>>> parent of b191010... Prøvd å fikse, men må tilbakestille prosjektet til før vi begynte med opplastningsfunksjon
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthUser.java</file>
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/uistrings_en.properties</file>
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthInfoBean.java</file>
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/uistrings.properties</file>
             <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/index.xhtml</file>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthGroup.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/auth/AuthBean.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/admin/user.xhtml</file>
->>>>>>> parent of 2cac12e... Revert "jobbet med email i tabell"
-=======
->>>>>>> parent of b191010... Prøvd å fikse, men må tilbakestille prosjektet til før vi begynte med opplastningsfunksjon
 >>>>>>> origin/master
         </group>
     </open-files>
