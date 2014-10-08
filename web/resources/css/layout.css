@@ -36,17 +36,14 @@ div.layout-outer {
   overflow:hidden;
 }
 .layout-outer .layout-inner {
-<<<<<<< HEAD
   right:80%;      /* right column width */
 }
 .layout-outer .layout-content {
   width:78%;      /* right column content width */
-=======
   right:81%;      /* right column width */
 }
 .layout-outer .layout-content {
   width:76%;      /* right column content width */
->>>>>>> 72674771a093e49a85551d783c45599afece1ae4
   left:102%;      /* 100% plus left column left padding */
 }
 .layout-outer .layout-menu {
