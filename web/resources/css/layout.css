@@ -6,7 +6,11 @@
   padding:0;
   width:100%;
 }
+
 div.layout-header {
+  background-image:url(http://bildr.no/image/dnhDQkpC.jpeg);
+  background-repeat: no-repeat;
+  height:110px;
   clear:both;
   float:left;
   width:100%;
