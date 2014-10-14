@@ -96,7 +96,7 @@ public class AuthUser implements Serializable {
          return false;
       }
       return true;
-   }
+    }
    
    public String getGroupString() {
       StringBuilder sb = new StringBuilder("[ ");
