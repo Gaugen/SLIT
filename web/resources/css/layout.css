@@ -6,7 +6,12 @@
   padding:0;
   width:100%;
 }
+
 div.layout-header {
+  background-image:url(http://s14.directupload.net/images/141014/gayy3z38.jpg);
+  background-color:#81d5eb;
+  background-repeat: no-repeat;
+  height:110px;
   clear:both;
   float:left;
   width:100%;
@@ -31,14 +36,18 @@ div.layout-outer {
   overflow:hidden;
 }
 .layout-outer .layout-inner {
-  right:75%;      /* right column width */
+  right:80%;      /* right column width */
 }
 .layout-outer .layout-content {
-  width:71%;      /* right column content width */
+  width:78%;      /* right column content width */
+  right:81%;      /* right column width */
+}
+.layout-outer .layout-content {
+  width:76%;      /* right column content width */
   left:102%;      /* 100% plus left column left padding */
 }
 .layout-outer .layout-menu {
-  width:21%;      /* left column content width (column width minus left and right padding) */
+  width:15%;      /* left column content width (column width minus left and right padding) */
   left:6%;      /* (right column left and right padding) plus (left column left padding) */
 }
 /* Footer styles */
@@ -47,6 +56,7 @@ div.layout-outer {
   float:left;
   width:100%;
   border-top:1px solid #000;
+  
 }
 #footer p {
   padding:10px;
