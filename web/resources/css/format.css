@@ -25,13 +25,12 @@ h3 {
   background:#fff;    /* right column background colour */
 }
 .layout-outer .layout-inner {
-  background:#3CF; /* left column background colour */
+  background:#81d5eb; /* left column background colour */
   border-right: 1px solid black;
 }
 
 /* Header elements */
 .layout-header {
-  background-color:#3CF;
   border-bottom:thin solid #000;
   text-align: center;
 }
@@ -82,3 +81,13 @@ th.prompt {
 td.input {
   text-align: left;
 }
+
+a:link {text-decoration:none;}    /* unvisited link */
+a:visited {text-decoration:none;} /* visited link */
+a:hover {text-decoration:none;}   /* mouse over link */
+a:active {text-decoration:none;}  /* selected link */
+
+a:link {color:#000000;}    /* unvisited link */
+a:visited {color:#000000;} /* visited link */
+a:hover {color:#FFFFFF;}   /* mouse over link */
+a:active {color:#FFFFFF;}  /* selected link */
