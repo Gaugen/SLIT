@@ -10,25 +10,28 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.modules}</h2>
-        <h3>#{uistrings.module_list_header}</h3>
-        <h:dataTable styleClass="data" value="" var="m">
+        <h2>Her er deltakerne av faget og deres kontaktinformasjon:</h2>
+        <h3>Registrerte brukere:</h3>
+        <h:dataTable value="#{authBean.users}" var="user" styleClass="data">
           <h:column>
-            <f:facet name="header">#{uistrings.module_no}</f:facet>
+            <f:facet name="header">#{uistrings.username}</f:facet>
+            #{user.username}
           </h:column>
           <h:column>
-            <f:facet name="header">#{uistrings.module_name}</f:facet>
+            <f:facet name="header">Email</f:facet>
+            #{user.email}
           </h:column>
           <h:column>
-            <f:facet name="header">#{uistrings.module_description}</f:facet>
+            <f:facet name="header">#{uistrings.groups}</f:facet>
+            #{user.groups}
           </h:column>
         </h:dataTable>
+        
       </ui:define>
 
       <ui:define name="menuitems">
-        <ui:include src="/teacher/menu.xhtml" />
+        <ui:include src="/student/menu.xhtml" />
       </ui:define>
     </ui:composition>
   </h:body>
 </html>
-

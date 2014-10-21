@@ -37,7 +37,7 @@ public class AuthInfoBean {
         if (null != userName && !(userName.equals(""))) {
             AuthUser user = authDb.findUser(userName);
             if (null != user) {
-                return "username="+user.getUsername()+", pwddigest="+user.getPassword()
+                return "username="+user.getUsername()+ ",email="+user.getEmail()+ ", pwddigest="+user.getPassword()
                         +", groups="+user.getGroupString();
             }
         }

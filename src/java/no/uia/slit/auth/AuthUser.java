@@ -22,6 +22,7 @@ import javax.persistence.JoinColumn;
 public class AuthUser implements Serializable {
    @Id
    private String username;
+   private String email;
    private String password;
    @ElementCollection(fetch= FetchType.EAGER)
    @CollectionTable(name="AUTHGROUPS",
@@ -32,6 +33,7 @@ public class AuthUser implements Serializable {
 
    public AuthUser() {
       username = "";
+      email = "";
       password = "";
       groups = new HashSet<AuthGroup>();
    }
@@ -43,7 +45,15 @@ public class AuthUser implements Serializable {
    public void setUsername(String username) {
       this.username = username;
    }
+   
+   public String getEmail() {
+       return email;
+   }
 
+   public void setEmail(String email) {
+      this.email = email;
+   }
+   
    public String getPassword() {
       return password;
    }
@@ -86,8 +96,8 @@ public class AuthUser implements Serializable {
          return false;
       }
       return true;
-   }
-
+    }
+   
    public String getGroupString() {
       StringBuilder sb = new StringBuilder("[ ");
       for (AuthGroup g : groups) {

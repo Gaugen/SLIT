@@ -21,6 +21,7 @@ public class AuthBean implements Serializable {
    @EJB
    private AuthPersistenceService authSvc;
    private AuthUser selectedUser;
+   private String email;
    private String password1, password2;
 
     public AuthBean() {
@@ -51,6 +52,14 @@ public class AuthBean implements Serializable {
     public AuthUser getSelectedUser() {
         System.out.println("getSelectedUser() returning "+selectedUser);
        return selectedUser;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        selectedUser.setEmail(email);
     }
 
     public String getPassword1() {
