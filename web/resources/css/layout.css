@@ -62,3 +62,8 @@ div.layout-outer {
   padding:10px;
   margin:0;
 }
+
+.messageBox {
+    height: 50px;
+    margin: 0;
+}

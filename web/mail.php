@@ -1,4 +1,8 @@
 <?php
+$myServer = "localhost";
+$myUser = "tomee";
+$myPass = "tomee";
+$myDB = "examples"; 
 //hentet fra w3 schools
 if (isset($_REQUEST['email']))
 
