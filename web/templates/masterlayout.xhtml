@@ -9,6 +9,12 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
   <h:head>
+      <script>
+function innleveringsFunksjon() {
+    alert("Innlevering for Modul 2\n\
+Frist: 20 November 2014");
+}
+</script>
       <script type="text/javascript">
 <!--
 
@@ -48,6 +54,7 @@ window.onload=GetClock;
   </h:head>
   <h:body onload="updateClock(); setInterval('updateClock()', 1000 )">
     <div class="layout-header">
+        
  
 <!--      <h1>#{uistrings.app_name}</h1> -->
       <h2>#{debugBean.userName}</h2>
@@ -76,14 +83,18 @@ window.onload=GetClock;
             <li>
               <h:form rendered="#{authInfoBean.isLoggedIn()}">
                 <h:commandLink action="#{authInfoBean.logout()}" value="#{uistrings.logout}"/>
-              </h:form>
+            
+              </h:form>   
             </li>
-            <ui:insert name="menuitems"/>
-          </ul>
-         
+              <ui:insert name="menuitems"/><br></br>
+              <ul><li><button onclick="innleveringsFunksjon()">Sjekk neste innleveringsfrist</button></li></ul>
+        </ul>
         </div>
+          
       </div>
+        
     </div>
+      
     <div class="layout-footer">
       
 <a href="http://www.uia.no"><img src="http://home.uia.no/cornelib/hjem/grafikk-hjemmeside/uia_logo_hvit_utentxt.gif" alt="HTML tutorial" style="width:42px;height:29px;border:0"></img></a>
