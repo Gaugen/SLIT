@@ -11,6 +11,7 @@
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
         <h2>Her er deltakerne av faget og deres kontaktinformasjon:</h2>
+        <input type="button" value="Kontakt noen!" onClick="mailsome1()"> </input>
         <h3>Registrerte brukere:</h3>
         <h:dataTable value="#{authBean.users}" var="user" styleClass="data">
           <h:column>

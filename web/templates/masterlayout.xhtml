@@ -14,7 +14,17 @@ function innleveringsFunksjon() {
     alert("Innlevering for Modul 2\n\
 Frist: 20 November 2014");
 }
+
+function mailsome1(){
+who=prompt("Skriv inn mottakers email-adresse: ","EKSEMPEL@gmail.com");
+what=prompt("Skriv inn emnet: ","none");
+if (confirm("Er du sikker på at du vil sende mail til "+who+" med emnet "+what+"?")==true){
+parent.location.href='mailto:'+who+'?subject='+what+'';
+   }
+}
 </script>
+      
+      
       <script type="text/javascript">
 <!--
 
