@@ -4,11 +4,14 @@
  */
 package no.uia.slit.entity;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -17,67 +20,91 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Module {
    @Id @GeneratedValue
-   private long id;
+   private long moduleNo;
    @Column(unique=true)
-   private String name;
+   private String moduleName;
    private String description;
-   @ManyToOne
-   private Module requiredModule;
+   @ManyToOne 
+   private SlitFile ressurs;
+   @OneToMany (mappedBy = "module")
+   private List<ModuleAssessment> students;
    
    public Module() {
+       students = new ArrayList<ModuleAssessment>();
    }
+   
+    public Module(String moduleName, ) {
+        this();
+        this.moduleName = moduleName;
+    }
 
-   public long getId() {
-      return id;
-   }
+    public long getModuleNo() {
+        return moduleNo;
+    }
 
-   public void setId(long id) {
-      this.id = id;
-   }
+    public String getModuleName() {
+        return moduleName;
+    }
 
-   public String getName() {
-      return name;
-   }
+    public void setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+    }
 
-   public void setName(String name) {
-      this.name = name;
-   }
+    public List<ModuleAssignment> getStudents() {
+        return students;
+    }
 
-   public String getDescription() {
-      return description;
-   }
+    public void addStudent(ModuleAssignment pa) {
+        for (ModuleAssignment stu : students) {
+            System.err.println("Checking " + stu);
+            if (stu.getStudent().equals(pa.getStudent())) {
+                return;
+            }
+        }
+        students.add(pa);
+    }
 
-   public void setDescription(String description) {
-      this.description = description;
-   }
+    public void removeStudent(ModuleAssignment pa) {
+        System.err.println("removing " + pa + " from " + this);
 
-   public Module getRequiredModule() {
-      return requiredModule;
-   }
+        for (ModuleAssignment s : students) {
+            System.err.println(s);
+        }
+        students.remove(pa);
+    }
 
-   public void setRequiredModule(Module requiredModule) {
-      this.requiredModule = requiredModule;
-   }
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + (int) (this.moduleNo ^ (this.moduleNo >>> 32));
+        return hash;
+    }
 
-   @Override
-   public int hashCode() {
-      int hash = 7;
-      hash = 73 * hash + (int) (this.id ^ (this.id >>> 32));
-      return hash;
-   }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Module other = (Module) obj;
+        if (this.moduleNo != other.moduleNo) {
+            return false;
+        }
+        return true;
+    }
 
-   @Override
-   public boolean equals(Object obj) {
-      if (obj == null) {
-         return false;
-      }
-      if (getClass() != obj.getClass()) {
-         return false;
-      }
-      final Module other = (Module) obj;
-      if (this.id != other.id) {
-         return false;
-      }
-      return true;
-   }
+    @Override
+    public String toString() {
+        return "[ " + moduleNo + " " + moduleName + " ]";
+    }
+
+    public SlitFile getFile() {
+        return file;
+    }
+
+    public void setFile(SlitFile file) {
+        this.file = file;
+    }
 }
