@@ -23,9 +23,13 @@ import javax.validation.constraints.Size;
  * @author even
  */
 @Entity
-public class Student {
-   @Id @GeneratedValue
-   private long Id;
+public class Student implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
+    
+   @Id 
+   @GeneratedValue
+   private long id;
    
    @Column(unique=true)
    private String username;
@@ -34,18 +38,19 @@ public class Student {
     @JoinColumn(nullable = false)
     private Module module;
     @OneToMany(mappedBy = "student")
-    private List<ModuleAssignment> module;
+    private List<Assessment> assessments;
 
    
    public Student() {
+       assessments = new ArrayList<Assessment>();
    }
 
    public long getId() {
-      return Id;
+      return id;
    }
 
-   public void setId(long Id) {
-      this.Id = Id;
+   public void setId(long id) {
+      this.id = id;
    }
 
    public String getUsername() {
@@ -60,7 +65,7 @@ public class Student {
    @Override
    public int hashCode() {
       int hash = 3;
-      hash = 67 * hash + (int) (this.Id ^ (this.Id >>> 32));
+      hash = 67 * hash + (int) (this.id ^ (this.id >>> 32));
       return hash;
    }
 
@@ -73,21 +78,21 @@ public class Student {
          return false;
       }
       final Student other = (Student) obj;
-      if (this.Id != other.Id) {
+      if (this.id != other.id) {
          return false;
       }
       return true;
    }
        public String toString() {
-        return "[" + id + " " + name + "]";
+        return "[" + id + " " + username + "]";
     }
 
-    public List<Module> getModule() {
-        return module;
+    public List<Assessment> getAssessment() {
+        return assessments;
     }
 
-    public  ModuleAssignment getModule(Module p) {
-        for (ModuleAssignment pa : module) {
+    public  Assessment getAssessment(Module p) {
+        for (Assessment pa : assessments) {
             if (pa.getModule().equals(p)) {
                 return pa;
             }
@@ -95,11 +100,11 @@ public class Student {
         return null;
     }
 
-    public void removeModule(ModuleAssignment pa) {
-        assignments.remove(pa);
+    public void removeAssessment(Assessment pa) {
+        assessments.remove(pa);
     }
 
-    public void addModule(ModuleAssignment pa) {
-        assignments.add(pa);
+    public void addAssessment(Assessment pa) {
+        assessments.add(pa);
     }
 }

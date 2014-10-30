@@ -19,10 +19,13 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Assessment implements Serializable {
-   @Id @GeneratedValue
+   @Id 
+   @GeneratedValue
    private long id;
    @ManyToOne
    private Student student;
+   @ManyToOne
+   private Teacher teacher;
    @ManyToOne
    private Module module;
    private Date assessmentDate;
@@ -30,6 +33,13 @@ public class Assessment implements Serializable {
    private String teachersComment;
 
    public Assessment() {
+   }
+   
+   public Assessment (Module module, Student student, Teacher teacher) {
+       this.student = student;
+       this.teacher = teacher;
+       this.module = module;
+       
    }
 
    public long getId() {

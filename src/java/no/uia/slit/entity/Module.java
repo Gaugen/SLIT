@@ -19,7 +19,8 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Module {
-   @Id @GeneratedValue
+   @Id 
+   @GeneratedValue
    private long moduleNo;
    @Column(unique=true)
    private String moduleName;
@@ -27,13 +28,13 @@ public class Module {
    @ManyToOne 
    private SlitFile ressurs;
    @OneToMany (mappedBy = "module")
-   private List<ModuleAssessment> students;
+   private List<Assessment> students;
    
    public Module() {
-       students = new ArrayList<ModuleAssessment>();
+       students = new ArrayList<Assessment>();
    }
    
-    public Module(String moduleName, ) {
+    public Module(String moduleName, LectureClass lectureClass  ) {
         this();
         this.moduleName = moduleName;
     }
@@ -50,12 +51,12 @@ public class Module {
         this.moduleName = moduleName;
     }
 
-    public List<ModuleAssignment> getStudents() {
+    public List<Assessment> getStudents() {
         return students;
     }
 
-    public void addStudent(ModuleAssignment pa) {
-        for (ModuleAssignment stu : students) {
+    public void addStudent(Assessment pa) {
+        for (Assessment stu : students) {
             System.err.println("Checking " + stu);
             if (stu.getStudent().equals(pa.getStudent())) {
                 return;
@@ -64,10 +65,10 @@ public class Module {
         students.add(pa);
     }
 
-    public void removeStudent(ModuleAssignment pa) {
+    public void removeStudent(Assessment pa) {
         System.err.println("removing " + pa + " from " + this);
 
-        for (ModuleAssignment s : students) {
+        for (Assessment s : students) {
             System.err.println(s);
         }
         students.remove(pa);
