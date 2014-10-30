@@ -10,8 +10,37 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.intro}</p>
+        <h2>Her kommer modulene</h2>
+        <p class="Modul1"><b>Modul 1</b></p>
+<a onclick="$('.Modul1, .ModulInfo').toggle('slow')">Read more</a>
+<div class="ModulInfo"><b>Modul 1</b>.
+<table border="1" style="width:100%">
+  <tr>
+    <td>Her kommer det til å stå informasjon om modul 1. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet</td> 
+    </tr>
+            
+</table>
+</div>
+<br></br>
+<br></br>
+        <p class="Modul2"><b>Modul 2</b></p>
+<a onclick="$('.Modul2, .ModulInfo2').toggle('slow')">Read more</a>
+        <div class="ModulInfo2"><b>Modul 2</b>.
+<table border="1" style="width:100%">
+  <tr>
+    <td>Her kommer det til å stå informasjon om modul 2. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet</td> 
+    </tr>
+            
+</table>
+</div>
+
+
       </ui:define>
 
       <ui:define name="menuitems">
