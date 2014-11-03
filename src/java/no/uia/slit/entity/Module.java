@@ -28,10 +28,10 @@ public class Module {
    @ManyToOne 
    private SlitFile ressurs;
    @OneToMany (mappedBy = "module")
-   private List<Assessment> students;
+   private List<Assessment> participants;
    
    public Module() {
-       students = new ArrayList<Assessment>();
+       participants = new ArrayList<Assessment>();
    }
    
     public Module(String moduleName, LectureClass lectureClass  ) {
@@ -51,27 +51,27 @@ public class Module {
         this.moduleName = moduleName;
     }
 
-    public List<Assessment> getStudents() {
-        return students;
+    public List<Assessment> getParticipant() {
+        return participants;
     }
 
-    public void addStudent(Assessment pa) {
-        for (Assessment stu : students) {
-            System.err.println("Checking " + stu);
-            if (stu.getStudent().equals(pa.getStudent())) {
+    public void addParticipant(Assessment pa) {
+        for (Assessment part : participants) {
+            System.err.println("Checking " + part);
+            if (part.getStudent().equals(pa.getStudent())) {
                 return;
             }
         }
-        students.add(pa);
+        participants.add(pa);
     }
 
-    public void removeStudent(Assessment pa) {
+    public void removeParticipant(Assessment pa) {
         System.err.println("removing " + pa + " from " + this);
 
-        for (Assessment s : students) {
+        for (Assessment s : participants) {
             System.err.println(s);
         }
-        students.remove(pa);
+        participants.remove(pa);
     }
 
     @Override
