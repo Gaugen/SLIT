@@ -5,40 +5,90 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
+     
     <title>Facelet Title</title>
   </h:head>
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
         <h2>Her kommer modulene</h2>
-        <p class="Modul1"><b>Modul 1</b></p>
-<a onclick="$('.Modul1, .ModulInfo').toggle('slow')">Read more</a>
-<div class="ModulInfo"><b>Modul 1</b>.
-<table border="1" style="width:100%">
-  <tr>
-    <td>Her kommer det til å stå informasjon om modul 1. En gang i fremtiden forhåpentligvis..</td>
+<h3>Modul 1</h3>
+<a onclick="toggleTable();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 1. En gang i fremtiden forhåpentligvis..</td>
       </tr>
     <tr>
             <td>Her vil det være mulig å gjøre noe annet</td> 
-    </tr>
-            
+    </tr>    
 </table>
-</div>
-<br></br>
-<br></br>
-        <p class="Modul2"><b>Modul 2</b></p>
-<a onclick="$('.Modul2, .ModulInfo2').toggle('slow')">Read more</a>
-        <div class="ModulInfo2"><b>Modul 2</b>.
-<table border="1" style="width:100%">
-  <tr>
-    <td>Her kommer det til å stå informasjon om modul 2. En gang i fremtiden forhåpentligvis..</td>
+
+<h3>Modul 2</h3>
+<a onclick="toggleTable2();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable2" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 2. En gang i fremtiden forhåpentligvis..</td>
       </tr>
     <tr>
             <td>Her vil det være mulig å gjøre noe annet</td> 
-    </tr>
-            
+    </tr>    
 </table>
-</div>
+
+<h3>Modul 3</h3>
+<a onclick="toggleTable3();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable3" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 3. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet</td> 
+    </tr>    
+</table>
+
+<h3>Modul 4</h3>
+<a onclick="toggleTable4();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable4" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 4. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet</td> 
+    </tr>    
+</table>
+
+<h3>Modul 5</h3>
+<a onclick="toggleTable5();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable5" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 5. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet</td> 
+    </tr>    
+</table>
+
+<h3>Modul 6</h3>
+<a onclick="toggleTable6();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable6" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 6. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet</td> 
+    </tr>    
+</table>
+
+<h3>Modul 7</h3>
+<a onclick="toggleTable7();" href="#">Vis informasjon / skjul informasjon</a>
+<table id="modulTable7" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 7. En gang i fremtiden forhåpentligvis..</td>
+      </tr>
+    <tr>
+            <td>Her vil det være mulig å gjøre noe annet
+            </td> 
+    </tr>    
+</table>
 
 
       </ui:define>
