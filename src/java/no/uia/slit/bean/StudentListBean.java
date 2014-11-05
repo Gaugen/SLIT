@@ -1,14 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package no.uia.slit.bean;
+
+import no.uia.slit.ejb.StudentEJB;
+import no.uia.slit.entity.Student;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.inject.Named;
 
 /**
  *
- * @author Tor
+ * @author evenal
  */
+@Named("stulistbean")
 public class StudentListBean {
-    
+
+    @EJB
+    private StudentEJB stuEjb;
+
+    public List<Student> getStudents() {
+        return stuEjb.findAll();
+    }
+
+    public List<Student> getUnassignedStudents() {
+        return stuEjb.findUnassigned();
+    }
+
 }

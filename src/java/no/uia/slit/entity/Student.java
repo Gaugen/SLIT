@@ -32,7 +32,7 @@ public class Student implements Serializable {
    private long id;
    
    @Column(unique=true)
-   private String username;
+   private String name;
 
     @ManyToOne
     @JoinColumn(nullable = false)
@@ -53,12 +53,12 @@ public class Student implements Serializable {
       this.id = id;
    }
 
-   public String getUsername() {
-      return username;
+   public String getName() {
+      return name;
    }
 
-   public void setUsername(String username) {
-      this.username = username;
+   public void setName(String name) {
+      this.name = name;
    }
 
    
@@ -84,7 +84,7 @@ public class Student implements Serializable {
       return true;
    }
        public String toString() {
-        return "[" + id + " " + username + "]";
+        return "[" + id + " " + name + "]";
     }
 
     public List<Assessment> getAssessment() {

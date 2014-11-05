@@ -1,14 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package no.uia.slit.bean;
+
+import no.uia.slit.ejb.ModuleEJB;
+import no.uia.slit.entity.Module;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 
 /**
  *
- * @author Tor
+ * @author evenal
  */
+@Named("modulelistbean")
+@RequestScoped
 public class ModuleListBean {
-    
+
+    @EJB
+    ModuleEJB modEjb;
+
+    public List<Module> getModules() {
+        return modEjb.findAll();
+    }
+
 }
