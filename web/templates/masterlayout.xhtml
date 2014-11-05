@@ -106,6 +106,85 @@ parent.location.href='mailto:'+who+'?subject='+what+'';
            elem.style.display="none";
         }
     }    
+                          function toggleTable11()
+    {
+         var elem=document.getElementById("ressursTable");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
+    
+                          function toggleTable12()
+    {
+         var elem=document.getElementById("ressursTable2");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
+    
+                          function toggleTable13()
+    {
+         var elem=document.getElementById("ressursTable3");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
+                          function toggleTable14()
+    {
+         var elem=document.getElementById("ressursTable4");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
+                          function toggleTable15()
+    {
+         var elem=document.getElementById("ressursTable5");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
+                          function toggleTable16()
+    {
+         var elem=document.getElementById("ressursTable6");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
+                              function toggleTable17()
+    {
+         var elem=document.getElementById("ressursTable7");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    } 
 <!--
 
 tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
@@ -161,6 +240,7 @@ window.onload=GetClock;
         <div class="layout-menu">
             <ul><li> 
                    <h5 id="clockbox">LOL</h5>
+                   
               </li></ul>
           <p>
             <h:outputText rendered="#{authInfoBean.loggedIn}"
@@ -169,8 +249,10 @@ window.onload=GetClock;
                           value="#{uistrings.not_logged_in}"/>
           </p>
           <h3>#{uistrings.menu_h1}</h3>
+          
           <ul>
             <li>
+                <a href="http://localhost:8080/slit/index.xhtml">Hjem</a>
               <h:form rendered="#{authInfoBean.isLoggedIn()}">
                 <h:commandLink action="#{authInfoBean.logout()}" value="#{uistrings.logout}"/>
             

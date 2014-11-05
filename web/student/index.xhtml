@@ -10,8 +10,44 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.intro}</p>
+
+<div id="ProfilePage">
+    <div id="LeftCol">
+        <div id="Photo"><img src="http://images.forbes.com/media/lists/companies/starbucks_200x200.jpg"></img></div>
+        <div id="ProfileOptions">
+        Systemutvikler
+        </div>
+    </div>
+
+    <div id="Info">
+        <p>
+            <strong>Name:</strong>
+            <span>mittnavn</span>
+        </p>
+        <p>
+            <strong>Brukernavn:</strong>
+            <span>#{debugBean.userName}</span>
+            
+             <!--  <h:outputText rendered="#{authInfoBean.loggedIn}"
+                          value=" #{authInfoBean.userName}"/> -->
+        </p>
+        <p>
+            <strong>Email:</strong>
+            <span>@minemail</span>
+        </p>
+        <p>
+            <strong>Alder:</strong>
+            <span>129</span>
+        </p>
+        <p>
+            <strong>Annen informasjon:</strong>
+            <span> ekkobrugarenvilhaher.</span>
+        </p>
+    </div>
+
+    <!-- Needed because other elements inside ProfilePage have floats -->
+    <div style="clear:both"></div>
+</div>
       </ui:define>
 
       <ui:define name="menuitems">
