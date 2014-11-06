@@ -3,22 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/StudentBean.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/View.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/StudentListBean.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/ModDataBean.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/LectureClass.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/Student.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/ModuleBean.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/LectureClassEJB.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/web/JsfUtils.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/Module.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/ModuleListBean.java</file>
-=======
-            <file>file:/C:/Users/thimen/Documents/GitHub/SLIT/web/resources/css/layout.css</file>
-            <file>file:/C:/Users/thimen/Documents/GitHub/SLIT/web/templates/masterlayout.xhtml</file>
->>>>>>> origin/Design
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/index.xhtml</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/deltakere.xhtml</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/FileEJB.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/resources.xhtml</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/status.xhtml</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/modules.xhtml</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/menu.xhtml</file>
         </group>
     </open-files>
 </project-private>
