@@ -4,13 +4,13 @@ import no.uia.slit.entity.Student;
 import no.uia.slit.entity.SlitFile;
 import no.uia.slit.entity.Module;
 import no.uia.slit.entity.Assessment;
-import no.uia.slit.auth.AuthGroup;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import no.uia.slit.entity.Teacher;
 
 /**
  *
@@ -60,7 +60,7 @@ public class ModuleEJB extends AbstractFacade<Module> {
         return editedMod;
     }
 
-    public void addParticipant(long moduleNo, Student stu, AuthGroup group) {
+    public void addParticipant(long moduleNo, Student stu, Teacher teacher) {
         Module mod = find(moduleNo);
         if (null == mod) {
             System.err.println("krise - mod er null");
@@ -68,14 +68,14 @@ public class ModuleEJB extends AbstractFacade<Module> {
         }
         stu = em.merge(stu);
 
-        Assessment assessment = new Assessment(mod, stu, group);
+        Assessment assessment = new Assessment(mod, stu, teacher);
         em.persist(assessment);
         mod.addParticipant(assessment);
         stu.addAssessment(assessment);
     }
 
     public void removeParticipant(long moduleNo, long stuNo) {
-        System.err.println("removing " + stuNo + " from " + modNo);
+        System.err.println("removing " + stuNo + " from " + moduleNo);
         Module mod = find(moduleNo);
         Student stu = stuEjb.find(stuNo);
         Assessment pa = null;
@@ -94,7 +94,7 @@ public class ModuleEJB extends AbstractFacade<Module> {
         }
     }
 
-    public void setUpploadFile(Module mod, SlitFile file) {
+    public void setUploadFile(Module mod, SlitFile file) {
         System.out.println("Uploading " + file + " to " + mod);
         // only add file if module exists, and file is not empty
         if (mod.getModuleNo() > 0 && file.getSize() > 0) {
@@ -104,7 +104,7 @@ public class ModuleEJB extends AbstractFacade<Module> {
             } else {
                 file = fileEjb.insert(file);
             }
-            module.setFile(file);
+            mod.setFile(file);
         }
     }
 }

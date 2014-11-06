@@ -15,7 +15,7 @@ import javax.persistence.OneToMany;
 
 /**
  *
- * @author even
+ * @author Tor
  */
 @Entity
 public class Module {
@@ -26,7 +26,7 @@ public class Module {
    private String moduleName;
    private String description;
    @ManyToOne 
-   private SlitFile ressurs;
+   private SlitFile file;
    @OneToMany (mappedBy = "module")
    private List<Assessment> participants;
    

@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
+import static java.lang.Long.min;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.JoinColumn;
@@ -33,10 +34,10 @@ public class Student implements Serializable {
    
    @Column(unique=true)
    private String name;
-
+   
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Module module;
+    private LectureClass lectureClass;
     @OneToMany(mappedBy = "student")
     private List<Assessment> assessments;
 
@@ -60,7 +61,14 @@ public class Student implements Serializable {
    public void setName(String name) {
       this.name = name;
    }
+   
+   public LectureClass getLectureClass() {
+        return lectureClass;
+    }
 
+   public void setLectureClass(LectureClass lectureClass) {
+        this.lectureClass = lectureClass;
+    }
    
    @Override
    public int hashCode() {

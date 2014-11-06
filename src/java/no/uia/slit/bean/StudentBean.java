@@ -81,7 +81,7 @@ public class StudentBean implements Serializable {
     }
 
     public void setLectureClass(LectureClass lectureClass) {
-        stu.setLectureClass(stu);
+        stu.setLectureClass(lectureClass);
     }
 
     public View saveStudent() {

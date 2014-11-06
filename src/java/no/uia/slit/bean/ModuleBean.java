@@ -20,7 +20,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author evenal
+ * @author Tor
  */
 @Named("modulebean")
 @ConversationScoped
@@ -81,14 +81,14 @@ public class ModuleBean implements Serializable {
         return modEjb.getParticipant(pid);
     }
 
-    public View addParticipant(Student stu, Role role) {
+    public View addParticipant(Student stu) {
         return View.module;
     }
 
     public View removeParticipant(Student stu) {
         if (null != stu) {
             System.err.println("Removing " + stu);
-            modEjb.removeMember(pid, mod.getId());
+            modEjb.removeParticipant(pid, mod.getModuleNo());
         }
 
         return View.module;
@@ -115,13 +115,13 @@ public class ModuleBean implements Serializable {
         System.out.println("module is " + mod);
         SlitFile file = filebean.getFile();
         System.out.println("file is " + file);
-        modEjb.setModuleFile(mod, file);
+        modEjb.setUploadFile(mod, file);
         return View.module;
     }
 
     public long getFileId() {
         if (mod != null) {
-            SlitFile plan = mod.getFile();
+            SlitFile file = mod.getFile();
             if (null == file) {
                 return 0;
             } else {

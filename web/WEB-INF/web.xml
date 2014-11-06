@@ -89,6 +89,7 @@ unchanged, for the rest of the course -->
   <!-- This is a security restriction. To access the pages in the admin
   folder, the user must have the admin role (which is the same
   thing as belonging to the admin group -->
+  <!--
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Admin pages</web-resource-name>
@@ -100,9 +101,9 @@ unchanged, for the rest of the course -->
       <role-name>admin</role-name>
     </auth-constraint>
   </security-constraint>
-
+-->
   <!-- Only student users can access the student pages -->
-  <security-constraint>
+ <!-- <security-constraint>
     <web-resource-collection>
       <web-resource-name>Student Pages</web-resource-name>
       <url-pattern>/student/*</url-pattern>
@@ -111,9 +112,9 @@ unchanged, for the rest of the course -->
       <role-name>student</role-name>
     </auth-constraint>
   </security-constraint>
-
+-->
   <!-- ... and the teacher pages are only available to teachers -->
-  <security-constraint>
+ <!-- <security-constraint>
     <web-resource-collection>
       <web-resource-name>Teacher Pages</web-resource-name>
       <url-pattern>/teacher/*</url-pattern>
@@ -122,7 +123,7 @@ unchanged, for the rest of the course -->
       <role-name>teacher</role-name>
     </auth-constraint>
   </security-constraint>
-
+-->
   <!-- This is a specification of how login should be handled. The
   value FORM tells the server that the user should be redirected to
   the specificed form page when login is needed -->

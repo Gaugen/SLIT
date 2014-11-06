@@ -67,15 +67,15 @@ public class LectureClassEJB extends AbstractFacade<LectureClass> {
      * @return 
      */
     public LectureClass find (long classNo) {
-        LectureClass class = super.find(classNo);
-        if (null != class) {
-            class.getStudents();
+        LectureClass lectureClass = super.find(classNo);
+        if (null != lectureClass) {
+            lectureClass.getStudents();
                 }
-        return class;
+        return lectureClass;
     }
     @Override
-    public void delete(LectureClass class) {
-        LectureClass dbClass = find (class.getClassNo());
+    public void delete(LectureClass lectureClass) {
+        LectureClass dbClass = find (lectureClass.getClassNo());
         List<Student> studs = dbClass.getStudents();
         if (studs != null && studs.size() > 0) {
             throw new EJBException("Cannot delete Lecture Class with Students in it");
