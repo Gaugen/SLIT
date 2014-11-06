@@ -42,6 +42,7 @@ public class JsfUtils {
         }
         else return null;
     }
+    
 
     public static void logout() {
         FacesContext ctxt = FacesContext.getCurrentInstance();
