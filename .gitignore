@@ -19,3 +19,4 @@ nb-configuration.xml
 *.war
 *.ear
 >>>>>>> origin/Design
+*.xml
