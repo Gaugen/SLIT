@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
-import static java.lang.Long.min;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.JoinColumn;

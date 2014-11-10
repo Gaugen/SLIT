@@ -41,7 +41,4 @@ public class LectureClassListBean implements Serializable {
         return classEjb.count() > 0;
     }
 
-//    public boolean getDepartmentsDefined() {
-//        return isDepartmentsDefined();
-//    }
 }

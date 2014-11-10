@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/index.xhtml</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/deltakere.xhtml</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/FileEJB.java</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/resources.xhtml</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/status.xhtml</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/modules.xhtml</file>
-            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/web/student/menu.xhtml</file>
+            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/web/teacher/LectureClasses.xhtml</file>
+            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/LectureClassBean.java</file>
+            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/web/teacher/LectureClass.xhtml</file>
+            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/bean/LectureClassListBean.java</file>
+            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/web/teacher/menu.xhtml</file>
         </group>
     </open-files>
 </project-private>
