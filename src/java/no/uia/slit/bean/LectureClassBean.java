@@ -40,6 +40,7 @@ public class LectureClassBean implements Serializable {
     private long classNo;
     private String name;
     private List<Student> students;
+    private LectureClass lecClass;
 
     public LectureClassBean() {
     }
@@ -54,20 +55,21 @@ public class LectureClassBean implements Serializable {
             conv.begin();
         }
 
-        LectureClass lecClass = classEjb.find(classNo);
+        lecClass = classEjb.find(classNo);
+        System.out.println("tull0" + lecClass);
         if (null == lecClass) {
             // we will get here if depNo is not a valid, or if
             // depNo is valid but there is no department with that depno
             updating = false;
-            classNo = 0;
-            name = "";
-            students = new ArrayList<Student>();
-        } else {
+            lecClass = new LectureClass();
+            System.out.println("tull1" + lecClass);
+        } else System.out.println("tull2" + lecClass);{
             updating = true;
+            System.out.println("tull3" + lecClass);
+        }System.out.println("tull4" + lecClass);
             this.classNo = lecClass.getClassNo();
             name = lecClass.getName();
             students = lecClass.getStudents();
-        }
     }
 
     public long getClassNo() {
@@ -89,19 +91,10 @@ public class LectureClassBean implements Serializable {
     public boolean isUpdating() {
         return updating;
     }
-
-    private LectureClass createLecClassObject() {
-        // Create a department object containing the data
-        // from the form. The object can be passed on to
-        // depListBean
-        LectureClass lecClass = new LectureClass();
-        lecClass.setClassNo(classNo);
-        lecClass.setName(name);
-        return lecClass;
-    }
+ 
 
     public View saveLectureClass() {
-        LectureClass lecClass = createLecClassObject();
+    
         if (updating) {
             classEjb.update(lecClass);
         } else {
@@ -112,7 +105,7 @@ public class LectureClassBean implements Serializable {
     }
 
     public View deleteLectureClass() {
-        LectureClass lecClass = createLecClassObject();
+     
         try {
             classEjb.delete(lecClass);
         } catch (EJBException e) {
