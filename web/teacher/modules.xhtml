@@ -21,11 +21,11 @@
               <h:column>
                   <f:facet name="header">Modulnavn</f:facet>
                   <!-- Modulnavn er en link som man kan komme videre til redigeringsside ved å trykke på.-->
-                  <h:link outcome="module?pid=#{mod.}"
+                  <h:link outcome="module?pid=#{module.pid}">#{module.name}</h:link>
               </h:column>
           </h:dataTable>
       </ui:define>
-
+        <h:link value="opprett en ny modul" outcome="module?pid=0"/>
       <ui:define name="menuitems">
         <ui:include src="/teacher/menu.xhtml" />
       </ui:define>

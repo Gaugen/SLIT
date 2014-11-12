@@ -21,12 +21,12 @@ public class ModDataBean implements Serializable {
     @EJB
     private ModuleEJB modEjb;
 
-    private Module mod;
+    private Module module;
     private boolean updating;
 
     public ModDataBean() {
         updating = false;
-        mod = null;
+        module = null;
     }
 
     public boolean isUpdating() {
@@ -34,10 +34,10 @@ public class ModDataBean implements Serializable {
     }
 
     public long getModule() {
-        if (null == mod) {
+        if (null == module) {
             return 0;
         } else {
-            return mod.getModuleNo();
+            return module.getModuleNo();
         }
     }
 
@@ -45,9 +45,9 @@ public class ModDataBean implements Serializable {
         if (conv.isTransient()) {
             conv.begin();
         }
-        mod = modEjb.find(modId);
-        if (null == mod) {
-            mod = new Module();
+        module = modEjb.find(modId);
+        if (null == module) {
+            module = new Module();
             updating = false;
         } else {
             updating = true;

@@ -35,7 +35,7 @@ public class ModuleBean implements Serializable {
     @EJB
     private ModuleEJB modEjb;
 
-    private Module mod;
+    private Module module;
     private boolean updating;
 
     // ****
@@ -43,7 +43,7 @@ public class ModuleBean implements Serializable {
 
     public ModuleBean() {
         updating = false;
-        mod = null;
+        module = null;
     }
 
     public boolean isUpdating() {
@@ -58,23 +58,23 @@ public class ModuleBean implements Serializable {
         if (conv.isTransient()) {
             conv.begin();
         }
-        mod = modEjb.find(pid);
-        if (null == mod) {
-            mod = new Module();
+        module = modEjb.find(pid);
+        if (null == module) {
+            module = new Module();
             this.pid = 0;
             updating = false;
         } else {
-            this.pid = mod.getModuleNo();
+            this.pid = module.getModuleNo();
             updating = true;
         }
     }
 
     public String getModuleName() {
-        return mod.getModuleName();
+        return module.getModuleName();
     }
 
     public void setModuleName(String moduleName) {
-        mod.setModuleName(moduleName);
+        module.setModuleName(moduleName);
     }
 
     public List<Assessment> getParticipant() {
@@ -88,7 +88,7 @@ public class ModuleBean implements Serializable {
     public View removeParticipant(Student stu) {
         if (null != stu) {
             System.err.println("Removing " + stu);
-            modEjb.removeParticipant(pid, mod.getModuleNo());
+            modEjb.removeParticipant(pid, module.getModuleNo());
         }
 
         return View.module;
@@ -96,32 +96,32 @@ public class ModuleBean implements Serializable {
 
     public View saveProject() {
         if (updating) {
-            modEjb.update(mod);
+            modEjb.update(module);
         } else {
-            modEjb.insert(mod);
+            modEjb.insert(module);
         }
         conv.end();
         return View.modules;
     }
 
     public View deleteModule() {
-        modEjb.delete(mod);
+        modEjb.delete(module);
         conv.end();
         return View.modules;
     }
 
     public View setFile() {
         System.out.println("ModuleBean.setFile()");
-        System.out.println("module is " + mod);
+        System.out.println("module is " + module);
         SlitFile file = filebean.getFile();
         System.out.println("file is " + file);
-        modEjb.setUploadFile(mod, file);
+        modEjb.setUploadFile(module, file);
         return View.module;
     }
 
     public long getFileId() {
-        if (mod != null) {
-            SlitFile file = mod.getFile();
+        if (module != null) {
+            SlitFile file = module.getFile();
             if (null == file) {
                 return 0;
             } else {
