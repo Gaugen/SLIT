@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  <h:head>
+    <title>Facelet Title</title>
+    <h:outputStylesheet name="layout.css" library="css" />
+    <h:outputStylesheet name="format.css" library="css" />
+  </h:head>
+  <h:body>
+    <ui:composition template="/templates/masterlayout.xhtml">
+      <ui:define name="content">
+        <div class="discusBox">
+            <img src="http://www.kickassmysticninjas.com/images/kamn_120x120.jpg"> </img><!-- just for testing -->
+
+ <div class="discusTitle">
+   <h3>Dette er en tullete post</h3> <!-- just for testing -->
+ </div> 
+
+ <div class="discusBrief">
+   <p>Dette er en tullette post av en tullete lærer. Eeeehm, idag skal vi eeeehm gjøre noe eeehm som dere syntes er eeeehm gøy.</p>    
+<!-- just for testing -->
+ </div><!-- end of discusBrief -->
+
+ <div class="discusMeta">
+
+   <div class="discusMetaPostedOn">
+     <span>Postet den</span>
+     <span class="discusMetaPostedOnDate">
+       04/11/14 <!-- just for testing -->
+     </span>
+   </div>
+
+   <div class="discusBy">
+     <span>Av</span>
+     <span>
+       Eeehm Eehmesen <!-- just for testing -->
+     </span>
+   </div>
+
+     </div>
+        </div>
+</ui:define>
+    </ui:composition>
+  </h:body>
+</html>
+
