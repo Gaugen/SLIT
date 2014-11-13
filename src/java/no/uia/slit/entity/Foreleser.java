@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Student implements Serializable {
+public class Foreleser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -27,11 +27,11 @@ public class Student implements Serializable {
     @ManyToOne
     @JoinColumn(nullable = false)
     private Modul modul;
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "foreleser")
     private final List<ModulEvaluering> evaluering;
 
     @SuppressWarnings("Convert2Diamond")
-    public Student() {
+    public Foreleser() {
         evaluering = new ArrayList<ModulEvaluering>();
     }
 
@@ -74,7 +74,7 @@ public class Student implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Student other = (Student) obj;
+        final Foreleser other = (Foreleser) obj;
         if (this.id != other.id) {
             return false;
         }

@@ -28,6 +28,7 @@ public enum Page {
         this.url = this.name();
     }
 
+    @Override
     public String toString() {
         return url;
     }

@@ -1,22 +1,22 @@
 package no.uia.slit.ejb;
 
-import no.uia.slit.entity.SlitFile;
+import no.uia.slit.entity.Slitfil;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Tor Arne
+ * @author Tor
  */
 @Stateless
-public class FileEJB extends AbstractFacade<SlitFile> {
+public class SlitfilEJB extends AbstractFacade<Slitfil> {
 
     @PersistenceContext
     private EntityManager em;
 
-    public FileEJB() {
-        super(SlitFile.class);
+    public SlitfilEJB() {
+        super(Slitfil.class);
     }
 
     @Override
@@ -24,12 +24,12 @@ public class FileEJB extends AbstractFacade<SlitFile> {
         return em;
     }
 
-    public byte[] getContents(int fileId) {
-        SlitFile file = find(fileId);
-        if (null == file) {
+    public byte[] getInnhold(int filId) {
+        Slitfil fil = find(filId);
+        if (null == fil) {
             return null;
         } else {
-            return file.getFile();
+            return fil.getFil();
         }
     }
 }

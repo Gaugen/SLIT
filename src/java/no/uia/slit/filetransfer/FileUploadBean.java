@@ -1,6 +1,6 @@
 package no.uia.slit.filetransfer;
 
-import no.uia.slit.entity.SlitFile;
+import no.uia.slit.entity.SlitFil;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.enterprise.context.RequestScoped;
@@ -17,7 +17,7 @@ public class FileUploadBean {
 
     private boolean processedPart;
     private Part part;
-    private SlitFile file;
+    private SlitFil file;
 
     public FileUploadBean() {
     }
@@ -49,7 +49,7 @@ public class FileUploadBean {
         if (total != size) {
             System.err.println("Incorrect file size");
         }
-        file = new SlitFile(fileName, contentType, size, buf);
+        file = new SlitFil(fileName, contentType, size, buf);
         processedPart = true;
     }
 
@@ -76,7 +76,7 @@ public class FileUploadBean {
         processedPart = false;
     }
 
-    public SlitFile getFile() {
+    public SlitFil getFile() {
         System.out.println("FileUploadBean.getFile()");
         if (!processedPart) {
             try {
