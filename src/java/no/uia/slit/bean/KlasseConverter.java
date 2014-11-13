@@ -19,10 +19,10 @@ import javax.inject.Named;
  *
  * @author Tor 
  */
-@Named("lectureClassconverter")
+@Named("klasseConverter")
 @RequestScoped
-@FacesConverter(forClass = LectureClass.class)
-public class LectureClassConverter implements Converter {
+@FacesConverter(forClass = Klasse.class)
+public class KlasseConverter implements Converter {
 
     @EJB
     LectureClassEJB lectureClassEjb;
@@ -30,23 +30,23 @@ public class LectureClassConverter implements Converter {
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
         long lecClassId = Long.parseLong(value);
-        if (null == lectureClassEjb) {
+        if (null == KlasseEjb) {
             throw new ConverterException("No EJB!");
         }
-        LectureClass lecClass = lectureClassEjb.find(lecClassId);
-        if (null == lecClass) {
-            throw new ConverterException("Cannot convert \"" + value + "\" to Lecture Class");
+        LectureClass kla = KlasseEjb.find(klaId);
+        if (null == kla) {
+            throw new ConverterException("Cannot convert \"" + value + "\" to Klasse");
         }
-        return lecClass;
+        return kla;
     }
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
-        if (null != value && value instanceof LectureClass) {
-            LectureClass lecClass = (LectureClass) value;
-            return "" + lecClass.getLectureClassNo();
+        if (null != value && value instanceof Klasse) {
+            Klasse kla = (Klasse) value;
+            return "" + kla.getKlasseNo();
         }
-        throw new ConverterException("Illegal value: not a LectureClass object in " + component);
+        throw new ConverterException("Illegal value: not a Klasseobject in " + component);
     }
 
 }

@@ -20,7 +20,7 @@ import javax.persistence.PersistenceContext;
  * @author Tor Arne
  */
 @Stateless
-public class LectureClassEJB extends AbstractFacade<LectureClass> {
+public class KlasseEJB extends AbstractFacade<Klasse> {
 
     /**
      * The PersistenceContext annotation is a request to the container
@@ -41,8 +41,8 @@ public class LectureClassEJB extends AbstractFacade<LectureClass> {
         return em;
     }
 
-    public LectureClassEJB() {
-        super(LectureClass.class);
+    public KlasseEJB() {
+        super(Klasse.class);
     }
 
     /**
@@ -50,10 +50,10 @@ public class LectureClassEJB extends AbstractFacade<LectureClass> {
      * page, to make sure that every student belongs to a lecture class
      * @return 
      */
-    public LectureClass getDefaultLectureClass() {
-        List<LectureClass> classList = findAll();
-        if (classList != null && classList.size() > 0) {
-            return classList.get(0);
+    public Klasse getDefaultKlasse() {
+        List<Klasse> klasseListe = findAll();
+        if (klasseListe != null && klasseListe.size() > 0) {
+            return klasseListe.get(0);
         } else {
             throw new IllegalStateException("No classes available.");
         }
@@ -63,24 +63,24 @@ public class LectureClassEJB extends AbstractFacade<LectureClass> {
      * A wrapper for the find() method in AbstractFacade. It allows us to pass
      * the primary key as the primitive type long, rather than as the wrapper
      * type Long. It also forces loading of the lecture class's students
-     * @param classNo
+     * @param klasseNo
      * @return 
      */
-    public LectureClass find (long classNo) {
-        LectureClass lectureClass = super.find(classNo);
-        if (null != lectureClass) {
-            lectureClass.getStudents();
+    public Klasse find (long klasseNo) {
+        Klasse kla = super.find(klasseNo);
+        if (null != kla) {
+            kla.getStudents();
                 }
-        return lectureClass;
+        return kla;
     }
     @Override
-    public void delete(LectureClass lectureClass) {
-        LectureClass dbClass = find (lectureClass.getLectureClassNo());
-        List<Student> studs = dbClass.getStudents();
+    public void delete(Klasse klasse) {
+        Klasse dbKlasse = find (klasse.getKlasseNo());
+        List<Student> studs = dbKlasse.getStudents();
         if (studs != null && studs.size() > 0) {
-            throw new EJBException("Cannot delete Lecture Class with Students in it");
+            throw new EJBException("Cannot delete Klasse with Students in it");
         }
-        super.delete(dbClass);
+        super.delete(dbKlasse);
     }
 
     }

@@ -23,92 +23,92 @@ import javax.inject.Named;
  * code.
  * @author Tor
  */
-@Named("lectureClassbean")
+@Named("klassebean")
 @ConversationScoped
-public class LectureClassBean implements Serializable {
+public class KlasseBean implements Serializable {
 
     // The @Inject annotation is a request to the server to
     // give us a Conversation object, and store it in conv
     @Inject
     private Conversation conv;
     @EJB
-    LectureClassEJB classEjb;
-    private LectureClass lectureClass;
+    KlasseEJB klasseEjb;
+    private Klasse klasse;
     private boolean updating;
 
     // LectureClass properties - These properties will be copied to a LectureClass
     // object, when the time comes to save the data in the database.
-    private long lectureClassNo;
+    private long klasseNo;
     private String name;
     private List<Student> students;
-    private LectureClass lecClass;
+    private Klasse klasse;
 
-    public LectureClassBean() {
+    public KlasseBean() {
     }
 
     /**
      * called when the user selects a LectureClassfrom the list in
      * LectureClass.xhtml.
-     * @param lectureClassNo
+     * @param klasseNo
      */
-    public void setLectureClassNo(long lectureClassNo) {
+    public void setklasseNo(long klasseNo) {
         if (conv.isTransient()) {
             conv.begin();
         }
 
-        lecClass = classEjb.find(lectureClassNo);
-        System.out.println("tull0" + lecClass);
-        if (null == lecClass) {
+        kla = klasseEjb.find(klasseNo);
+        System.out.println("tull0" + kla);
+        if (null == kla) {
             // we will get here if depNo is not a valid, or if
             // depNo is valid but there is no department with that depno
             updating = false;
-            lecClass = new LectureClass();
-            System.out.println("tull1" + lecClass);
-        } else System.out.println("tull2" + lecClass);{
+            kla = new Klasse();
+            System.out.println("tull1" + kla);
+        } else System.out.println("tull2" + kla);{
             updating = true;
-            System.out.println("tull3" + lecClass);
-        }System.out.println("tull4" + lecClass);
-            this.lectureClassNo = lecClass.getLectureClassNo();
-            name = lecClass.getName();
-            students = lecClass.getStudents();
+            System.out.println("tull3" + kla);
+        }System.out.println("tull4" + kla);
+            this.klasseNo = kla.getKlasseNo();
+            name = kla.getNavn();
+            students = kla.getStudents();
     }
 
-    public long getLectureClassNo() {
-        System.out.println("tull2" + lecClass);
-        return lectureClassNo;
+    public long getKlasseNo() {
+        System.out.println("tull2" + kla);
+        return klasseNo;
     }
 
-    public String getName() {
-        System.out.println("tull2" + lecClass);
+    public String getNavn() {
+        System.out.println("tull2" + kla);
         return name;
     }
 
-    public void setName(String name) {
-        System.out.println("tull2" + lecClass);
+    public void setNavn(String name) {
+        System.out.println("tull2" + kla);
         this.name = name;
     }
 
     public List<Student> getStudents() {
-        System.out.println("tull2" + lecClass);
+        System.out.println("tull2" + kla);
         return students;
     }
 
     public boolean isUpdating() {
-        System.out.println("tull2" + lecClass);
+        System.out.println("tull2" + kla);
         return updating;
     }
  
 
-    public View saveLectureClass() {
-        System.out.println("tull1" + lecClass);
+    public View lagreKlasse() {
+        System.out.println("tull1" + kla);
     
-        if (updating) {System.out.println("tull2" + lecClass);
-            classEjb.update(lecClass);
-        } else {System.out.println("tull3" + lecClass);
-            classEjb.insert(lecClass);
+        if (updating) {System.out.println("tull2" + kla);
+            klasseEjb.update(kla);
+        } else {System.out.println("tull3" + kla);
+            klasseEjb.insert(kla);
         }
         conv.end();
-        return View.lectureClass;
+        return View.klasse;
     }
 
     public View deleteLectureClass() {System.out.println("tull2" + lecClass);

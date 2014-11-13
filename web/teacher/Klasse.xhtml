@@ -8,7 +8,7 @@
     <title>Facelet Title</title>
     <!-- Dette er redigeringssiden for klassene. -->
     <f:metadata>
-        <f:viewParam name="classNo" value="#{lectureClassbean.lectureClassNo}"/>
+        <f:viewParam name="classNo" value="#{klassebean.klasseNo}"/>
     </f:metadata>
   </h:head>
   <h:body>
@@ -18,19 +18,19 @@
           <h:form>
               <!-- Bruker panelgrid for å line opp formen som skal brukes til å redigere klassene.-->
               <h:panelGrid columns="2">
-                  <h:outputText value="Klassenummer" rendered="#{lectureClassbean.updating}"/>
-                  <h:outputText value="#{lectureClassbean.lectureClassNo}" rendered="#{lectureClassbean.updating}"/>
+                  <h:outputText value="Klassenummer" rendered="#{klassebean.updating}"/>
+                  <h:outputText value="#{klassebean.lectureClassNo}" rendered="#{klassebean.updating}"/>
                   <h:outputText value="Klassenavn"/>
                   <h:panelGroup>
                       <h:inputText id="name" label="Name"
-                                   value="#{lectureClassbean.name}"/>
+                                   value="#{klassebean.navn}"/>
                       <h:message for="name"/>
                   </h:panelGroup>
               </h:panelGrid>
               <h:commandButton value="Lagre Klasse"
-                               action="#{lectureClassbean.saveLectureClass}"/>
+                               action="#{klassebean.lagreKlasse}"/>
               <h:commandButton value="Slette Klasse"
-                               action="#{lectureClassbean.deleteLectureClass}"/>
+                               action="#{klassebean.slettKlasse}"/>
               <h:commandButton value="Avbryt"
                                immediate="true"
                                action="lectureClass"/>

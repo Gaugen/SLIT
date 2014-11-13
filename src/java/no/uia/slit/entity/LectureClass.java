@@ -24,7 +24,7 @@ public class LectureClass implements Serializable {
     
     @Id
     @GeneratedValue
-    private Long classNo;
+    private Long lectureClassNo;
     
     @NotNull
     @Size(min = 1)
@@ -40,12 +40,12 @@ public class LectureClass implements Serializable {
         students = new ArrayList<Student>();
     }
 
-    public Long getClassNo() {
-        return classNo;
+    public Long getLectureClassNo() {
+        return lectureClassNo;
     }
 
-    public void setClassNo(Long classNo) {
-        this.classNo = classNo;
+    public void setLectureClassNo(Long classNo) {
+        this.lectureClassNo = classNo;
     }
     
     public String getName() {
@@ -73,7 +73,7 @@ public class LectureClass implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + (int) (this.classNo ^ (this.classNo >>> 32));
+        hash = 29 * hash + (int) (this.lectureClassNo ^ (this.lectureClassNo >>> 32));
         return hash;
     }
 
@@ -90,7 +90,7 @@ public class LectureClass implements Serializable {
         }
 
         LectureClass other = (LectureClass) obj;
-        if (classNo != other.classNo) {
+        if (lectureClassNo != other.lectureClassNo) {
             return false;
         }
         return true;
@@ -99,7 +99,7 @@ public class LectureClass implements Serializable {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(classNo);
+        sb.append(lectureClassNo);
         sb.append(" ");
         sb.append(name);
 //        sb.append(" {");
