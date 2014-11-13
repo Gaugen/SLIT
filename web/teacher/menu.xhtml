@@ -16,27 +16,6 @@
     so it is defined in a separate file, to make it easier to override. -->
     <ui:composition>
       <li><h:link value="#{uistrings.admin_pages}" outcome="index"/></li>
-      <li>
-        <ul>
-          <li><h:link value="#{uistrings.useradm}" outcome="users"/></li>
-          <li>
-            <c:if test="#{view.viewId eq '/admin/users.xhtml'}">
-              <ul>
-                  <li><h:form><h:commandLink action="#{authBean.editNewUser()}"
-                                             value="#{uistrings.create_user}" /></h:form></li>
-              </ul>
-            </c:if>
-            <c:if test="#{view.viewId eq '/admin/user.xhtml'}">
-              <ul>
-                <li><h:form><h:commandLink action="#{authBean.saveSelectedUser()}"
-                                           value="#{uistrings.delete} user #{authBean.selectedUser.username}"/></h:form></li>
-              </ul>
-            </c:if>
-
-          </li>
-        </ul>
-      </li>
-=======
       <ul>
         <li><h:link value="Min Side" outcome="index"/></li>
         <li><h:link value="Modul" outcome="modules"/></li>
@@ -44,7 +23,6 @@
         <li><h:link value="Retting" outcome="assessment"/></li>
         <li><h:link value="Deltakere" outcome="deltakere"/></li>
       </ul>
->>>>>>> origin/Design
     </ui:composition>
   </h:body>
 </html>
