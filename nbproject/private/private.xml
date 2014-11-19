@@ -3,15 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/Foreleser.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/Modul.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/Student.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/ModulEJB.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/SlitfilEJB.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/ModulEvaluering.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/ForeleserEJB.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/StudentEJB.java</file>
-            <file>file:/C:/Users/TorArne/Documents/GitHub/SLIT/src/java/no/uia/slit/entity/Slitfil.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/ModulBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/filetransfer/FileDownloadBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/ModulDeltakerBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/filetransfer/FileUploadBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/ejb/ModulEJB.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/ModulDataBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/ModulListBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/StudentBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/StudentListBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/ForeleserListBean.java</file>
+            <file>file:/C:/Users/Tor/Documents/GitHub/SLIT/src/java/no/uia/slit/beans/ForeleserBean.java</file>
         </group>
     </open-files>
 </project-private>

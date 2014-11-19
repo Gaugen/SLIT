@@ -68,7 +68,7 @@ public class ModulEJB extends AbstractFacade<Modul> {
      * @param student
      * @param foreleser
      */
-    public void addDeltaker(long modulNo, Student student) {
+    public void addDeltaker(long modulNo, Student student, Foreleser foreleser) {
         Modul modul = find(modulNo);
         if (null == modul) {
             System.err.println("krise - modul er null");
@@ -76,10 +76,11 @@ public class ModulEJB extends AbstractFacade<Modul> {
         }
         student = em.merge(student);
 
-        ModulEvaluering evaluering = new ModulEvaluering(modul, student);
+        ModulEvaluering evaluering = new ModulEvaluering(modul, student, foreleser);
         em.persist(evaluering);
         modul.addDeltaker(evaluering);
         student.addEvaluering(evaluering);
+        foreleser.addEvaluering(evaluering);
     }
 
     public void removeDeltaker(long modulNo, long studentNo) {
@@ -91,7 +92,7 @@ public class ModulEJB extends AbstractFacade<Modul> {
         System.err.println("removing " + student + " from " + modul);
 
         if (modul != null && student != null) {
-            pa = modul.getEvaluering(modul);
+            pa = student.getEvaluering(modul);
             System.err.println("removing " + pa);
 
             student.removeEvaluering(pa);
