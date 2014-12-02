@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  <h:head>
+    <title>Facelet Title</title>
+  </h:head>
+  <h:body>
+    <ui:composition template="/templates/masterlayout.xhtml">
+      <ui:define name="content">
+        <h2>Innlevering</h2>
+<h3>Modul 1</h3>
+<a onclick="toggleTable11();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Last opp ditt svar til modul 1 her. 
+        <br></br>
+        <input type="text" name="FilNavn" value=""></input>
+        <button href="browse">Browse..</button>
+    </td> 
+      </tr>
+    <tr>
+        <td><input type="text" value="Skriv inn kommentar.." onfocus="if(this.value  == 'Skriv inn kommentar..') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'Skriv inn kommentar..'; } " />
+    <button href="lastopp">Last opp</button>
+        </td>
+    </tr>
+  
+</table>
+
+<h3>Modul 2</h3>
+<a onclick="toggleTable12();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable2" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 2. En gang i fremtiden forhåpentligvis..
+        <br></br></td>
+    <td>Her vil det være mulig å gjøre noe annet</td> 
+      </tr>
+</table>
+
+<h3>Modul 3</h3>
+<a onclick="toggleTable13();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable3" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 3. En gang i fremtiden forhåpentligvis..</td>
+    <td>Her vil det være mulig å gjøre noe annet</td> 
+      </tr> 
+</table>
+
+<h3>Modul 4</h3>
+<a onclick="toggleTable14();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable4" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 4. En gang i fremtiden forhåpentligvis..</td>
+    <td>Her vil det være mulig å gjøre noe annet</td> 
+      </tr>   
+</table>
+
+<h3>Modul 5</h3>
+<a onclick="toggleTable15();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable5" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 5. En gang i fremtiden forhåpentligvis..</td>
+    <td>Her vil det være mulig å gjøre noe annet</td> 
+      </tr>   
+</table>
+
+<h3>Modul 6</h3>
+<a onclick="toggleTable16();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable6" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 6. En gang i fremtiden forhåpentligvis..</td>
+    <td>Her vil det være mulig å gjøre noe annet</td> 
+      </tr>  
+</table>
+
+<h3>Modul 7</h3>
+<a onclick="toggleTable17();" href="#!">Vis informasjon / skjul informasjon</a>
+<table id="ressursTable7" border="1" float="left" style="display:none" class="modultables">
+      <tr>
+    <td>Her kommer det til å stå informasjon om Modul 7. En gang i fremtiden forhåpentligvis..</td>
+    <td>Her vil det være mulig å gjøre noe annet</td> 
+      </tr>  
+</table>
+      </ui:define>
+
+      <ui:define name="menuitems">
+        <ui:include src="/student/menu.xhtml" />
+      </ui:define>
+    </ui:composition>
+  </h:body>
+</html>
+
