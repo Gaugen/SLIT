@@ -21,7 +21,7 @@
             <h:column>
                 <f:facet name="header">Klassenavn</f:facet>
                 <!-- Klassenavn er en link til siden man kan redigere Klassen-->
-                <h:link outcome="lectureClass?classNo=#{lecClass.classNo}">#{lecClass.name}</h:link>
+                <h:link outcome="lectureClass?classNo=#{lecClass.lectureClassNo}">#{lecClass.name}</h:link>
             </h:column>
         </h:dataTable>
       </ui:define>

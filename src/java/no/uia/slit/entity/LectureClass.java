@@ -44,8 +44,8 @@ public class LectureClass implements Serializable {
         return lectureClassNo;
     }
 
-    public void setLectureClassNo(Long classNo) {
-        this.lectureClassNo = classNo;
+    public void setLectureClassNo(Long lectureClassNo) {
+        this.lectureClassNo = lectureClassNo;
     }
     
     public String getName() {
