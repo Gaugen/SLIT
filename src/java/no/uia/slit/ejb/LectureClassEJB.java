@@ -75,7 +75,7 @@ public class LectureClassEJB extends AbstractFacade<LectureClass> {
     }
     @Override
     public void delete(LectureClass lectureClass) {
-        LectureClass dbClass = find (lectureClass.getLectureClassNo());
+        LectureClass dbClass = find (lectureClass.getClassNo());
         List<Student> studs = dbClass.getStudents();
         if (studs != null && studs.size() > 0) {
             throw new EJBException("Cannot delete Lecture Class with Students in it");

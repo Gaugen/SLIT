@@ -12,7 +12,7 @@ import javax.persistence.Lob;
 
 /**
  * The Document entity represents an uploaded file.
- * @author even
+ * @author Tor
  */
 @Entity
 public class SlitFile implements Serializable {
@@ -65,6 +65,7 @@ public class SlitFile implements Serializable {
         return true;
     }
     
+    @Override
     public String toString () {
         return "[file " + id + " " + filename + " ]";
     }

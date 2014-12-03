@@ -9,7 +9,7 @@ import no.uia.slit.entity.Module;
 
 /**
  *
- * @author even
+ * @author Tor
  */
 public class ModulePersistenceService {
 

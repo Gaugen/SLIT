@@ -44,7 +44,7 @@ public class LectureClassConverter implements Converter {
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         if (null != value && value instanceof LectureClass) {
             LectureClass lecClass = (LectureClass) value;
-            return "" + lecClass.getLectureClassNo();
+            return "" + lecClass.getClassNo();
         }
         throw new ConverterException("Illegal value: not a LectureClass object in " + component);
     }

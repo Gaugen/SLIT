@@ -8,7 +8,7 @@
     <title>Facelet Title</title>
     <!-- Dette er redigeringssiden for klassene. -->
     <f:metadata>
-        <f:viewParam name="classNo" value="#{lectureClassbean.lectureClassNo}"/>
+        <f:viewParam name="classNo" value="#{lectureClassbean.classNo}"/>
     </f:metadata>
   </h:head>
   <h:body>
@@ -19,7 +19,7 @@
               <!-- Bruker panelgrid for å line opp formen som skal brukes til å redigere klassene.-->
               <h:panelGrid columns="2">
                   <h:outputText value="Klassenummer" rendered="#{lectureClassbean.updating}"/>
-                  <h:outputText value="#{lectureClassbean.lectureClassNo}" rendered="#{lectureClassbean.updating}"/>
+                  <h:outputText value="#{lectureClassbean.classNo}" rendered="#{lectureClassbean.updating}"/>
                   <h:outputText value="Klassenavn"/>
                   <h:panelGroup>
                       <h:inputText id="name" label="Name"

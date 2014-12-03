@@ -12,7 +12,11 @@
       <ui:define name="content">
           <h2>Moduler</h2>
           <h3>Trykk på modulene for å redigere dem, eller trykk ny modul for å lage en ny</h3>
-          
+         <!-- <h:form enctype="multipart/form-data">
+            <h:commandButton value="Upload new file:" action="#{FileUploadBean.setFile()}"/>
+            <br/>
+            <h:inputFile id="file" label="File" value="#{uploadbean.part}" />
+          </h:form>-->
           <h:dataTable value="#{modulelistbean.modules}" var="mod" styleClass="data">
               <h:column>
                   <f:facet name="header">Modul ID</f:facet>
@@ -25,7 +29,6 @@
               </h:column>
           </h:dataTable>
       </ui:define>
-        <h:link value="opprett en ny modul" outcome="module?pid=0"/>
       <ui:define name="menuitems">
         <ui:include src="/teacher/menu.xhtml" />
       </ui:define>

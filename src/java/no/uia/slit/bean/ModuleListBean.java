@@ -9,7 +9,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author evenal
+ * @author Tor
  */
 @Named("modulelistbean")
 @RequestScoped

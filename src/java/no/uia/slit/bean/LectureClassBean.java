@@ -6,13 +6,11 @@ import no.uia.slit.entity.Student;
 import no.uia.slit.web.JsfUtils;
 import no.uia.slit.web.View;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
 import javax.enterprise.context.Conversation;
 import javax.enterprise.context.ConversationScoped;
-import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -38,7 +36,7 @@ public class LectureClassBean implements Serializable {
 
     // LectureClass properties - These properties will be copied to a LectureClass
     // object, when the time comes to save the data in the database.
-    private long lectureClassNo;
+    private long classNo;
     private String name;
     private List<Student> students;
     private LectureClass lecClass;
@@ -49,18 +47,18 @@ public class LectureClassBean implements Serializable {
     /**
      * called when the user selects a LectureClassfrom the list in
      * LectureClass.xhtml.
-     * @param lectureClassNo
+     * @param classNo
      */
-    public void setLectureClassNo(long lectureClassNo) {
+    public void setClassNo(long classNo) {
         if (conv.isTransient()) {
             conv.begin();
         }
 
-        lecClass = classEjb.find(lectureClassNo);
+        lecClass = classEjb.find(classNo);
         System.out.println("tull0" + lecClass);
         if (null == lecClass) {
-            // we will get here if depNo is not a valid, or if
-            // depNo is valid but there is no department with that depno
+            // we will get here if classNo is not a valid, or if
+            // classNo is valid but there is no lectureClass with that classNo
             updating = false;
             lecClass = new LectureClass();
             System.out.println("tull1" + lecClass);
@@ -68,14 +66,14 @@ public class LectureClassBean implements Serializable {
             updating = true;
             System.out.println("tull3" + lecClass);
         }System.out.println("tull4" + lecClass);
-            this.lectureClassNo = lecClass.getLectureClassNo();
+            this.classNo = lecClass.getClassNo();
             name = lecClass.getName();
             students = lecClass.getStudents();
     }
 
-    public long getLectureClassNo() {
+    public long getClassNo() {
         System.out.println("tull2" + lecClass);
-        return lectureClassNo;
+        return classNo;
     }
 
     public String getName() {
