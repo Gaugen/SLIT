@@ -13,6 +13,7 @@
         <h2>Her er deltakerne av faget og deres kontaktinformasjon:</h2>
         <input type="button" value="Kontakt noen!" onClick="mailsome1()"> </input>
         <h3>Registrerte brukere:</h3>
+        <a href="Sendmail.jsp">Trykk her å sende E-post</a>
         <h:dataTable value="#{authBean.users}" var="user" styleClass="data">
           <h:column>
             <f:facet name="header">#{uistrings.username}</f:facet>
