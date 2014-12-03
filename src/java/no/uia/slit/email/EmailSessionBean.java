@@ -24,11 +24,11 @@ import javax.mail.internet.MimeMessage;
 public class EmailSessionBean {
     
 private int port = 587;
-private String host = "smtp.example.com";
-private String from = "matt@example.com";
+private String host = "multigan.com";
+private String from = "julian@usr.no";
 private boolean auth = true;
-private String username = "matt@example.com";
-private String password = "secretpw";
+private String username = "julian@usr.no";
+private String password = "julian123";
 private Protocol protocol = Protocol.SMTPS;
 private boolean debug = true;
     

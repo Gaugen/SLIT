@@ -41,6 +41,10 @@ public class EmailServlet extends HttpServlet {
         String body = request.getParameter("body");
         
         emailBean.sendEmail(to, subject, body);
+        
+        // Du har egentlig det du trenge der. Ser jo drid ud, men vil virka.
+        // 2 sec - ska sedda opp ei ntest-konto du kan bruga t smtp
+        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
