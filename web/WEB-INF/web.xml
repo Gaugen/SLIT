@@ -5,6 +5,7 @@ configuring the application when it is deployed in a production environment.
 There is rarely any reason for a developer to change this file. We will use it,
 unchanged, for the rest of the course -->
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
     <servlet>
         <servlet-name>EmailServlet</servlet-name>
         <servlet-class>no.uia.slit.email.EmailServlet</servlet-class>
@@ -21,6 +22,7 @@ unchanged, for the rest of the course -->
         <servlet-name>EmailSessionBean</servlet-name>
         <url-pattern>/EmailSessionBean</url-pattern>
     </servlet-mapping>
+    
     
     <context-param>
         <!-- This is a context parameter, it is used to pass information to the

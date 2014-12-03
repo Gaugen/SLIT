@@ -8,7 +8,7 @@
     <form method="POST" action="/SLIT/EmailServlet">
     <label for="to">To:</label><input id="to" name="to" type="text"/><br/>
     <label for="subject">Subject:</label><input id="subject" name="subject" type="text"/><br/>
-    <textarea name="body" cols="60" rows="15"></textarea><br/>
+    <textarea name="body" id="body" cols="60" rows="15"></textarea><br/>
     <input type="submit" value="Send"/>
         </form>
     </body>

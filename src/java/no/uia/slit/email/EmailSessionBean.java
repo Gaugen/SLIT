@@ -24,9 +24,9 @@ import javax.mail.internet.MimeMessage;
 public class EmailSessionBean {
     
 private int port = 587;
-private String host = "multigan.com";
+private String host = "smtp.altibox.no";
 private String from = "julian@usr.no";
-private boolean auth = true;
+private boolean auth = false;
 private String username = "julian@usr.no";
 private String password = "julian123";
 private Protocol protocol = Protocol.SMTPS;
