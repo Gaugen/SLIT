@@ -20,7 +20,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author even
+ * @author Tor
  */
 @Entity
 public class Student implements Serializable {
