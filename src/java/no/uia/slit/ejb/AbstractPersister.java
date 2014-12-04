@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
  * Subclasses of this class will be able to handle database operations
  * for a single class (the class that you substitute for T.
  *
- * @author evenal
+ * @author Tor
  */
 public abstract class AbstractPersister<T> {
     private Class<T> entityClass;

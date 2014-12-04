@@ -8,7 +8,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author evenal
+ * @author Tor
  */
 @Named("stulistbean")
 public class StudentListBean {

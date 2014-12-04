@@ -8,7 +8,7 @@ import javax.naming.NamingException;
 
 /**
  *
- * @author even
+ * @author Tor
  */
 public class EJBUtils {
 

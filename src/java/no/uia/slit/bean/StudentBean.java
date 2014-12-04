@@ -14,7 +14,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author evenal
+ * @author Tor
  */
 @Named("stubean")
 @ConversationScoped

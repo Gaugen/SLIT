@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
  * This class represents the results of an assessment of a student's
  * results for a particular module.
  *
- * @author even
+ * @author Tor
  */
 @Entity
 public class Assessment implements Serializable {
