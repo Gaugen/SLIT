@@ -191,16 +191,16 @@ tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
 function GetClock(){
-d = new Date();
-nday   = d.getDay();
-nmonth = d.getMonth();
-ndate  = d.getDate();
-nyear = d.getYear();
-nhour  = d.getHours();
-nmin   = d.getMinutes();
-nsec   = d.getSeconds();
+var d = new Date();
+var nday   = d.getDay();
+var nmonth = d.getMonth();
+var ndate  = d.getDate();
+var nyear = d.getYear();
+var nhour  = d.getHours();
+var nmin   = d.getMinutes();
+var nsec   = d.getSeconds();
 
-if(nyear<1000) nyear=nyear+1900;
+  var nyear = d.getFullYear();
 
      if(nhour ==  0) {ap = " AM";nhour = 12;} 
 else if(nhour <= 11) {ap = " AM";} 
